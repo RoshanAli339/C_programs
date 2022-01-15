@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
+
 void sum(int *a,int *b){
   int temp=*a;
   *a = *a+*b;

@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<stdlib.h>
 void main(){
   char s[100];
   printf("Enter a string: ");
