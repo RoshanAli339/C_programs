@@ -14,4 +14,8 @@ int main(){
         printf("%ld ",dup%10);
     }
     
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> b3859ada6a0d3ce70e3f3799c6ba8924c581d840
