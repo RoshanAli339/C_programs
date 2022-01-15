@@ -2,8 +2,8 @@
 
 int main(void)
 {
-	printf("Enter a name: ");
-	char *s;
-	scanf("%s",s);
-	printf("Hello %s.\n",s);
+	int a,b;
+	printf("Enter two numbers: ");
+	scanf("%d+%d",&a,&b);
+	printf("Sum = %d",a+b);
 }
