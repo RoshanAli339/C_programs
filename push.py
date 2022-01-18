@@ -30,6 +30,7 @@ def main():
     command = "git add " + add
     run_command(command)
 
+    commit = commit.replace(" ","''")
     command = 'git commit -m "' + commit + '"'
     run_command(command)
 
