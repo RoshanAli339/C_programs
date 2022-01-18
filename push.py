@@ -1,10 +1,7 @@
+from datetime import datetime
+import calendar
 import subprocess
 import sys
-
-add: str = sys.argv[1]
-commit: str = sys.argv[2]
-branch: str = sys.argv[3]
-
 
 def run_command(command: str):
     print(command)
@@ -25,13 +22,9 @@ def run_command(command: str):
 
 
 def main():
-    global add
-    global commit
-    global branch
-    if add == "" or add == " ":
-        add = "."
-    if branch == "":
-        branch = "main"
+    add = '.'
+    branch = 'main'
+    commit = datetime.now().strftime('%A %d %B %Y %H:%M:%S') 
     print("add: '" + add + "' commit: '" + commit + "' branch: '" + branch + "'")
 
     command = "git add " + add
