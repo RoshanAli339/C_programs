@@ -16,24 +16,21 @@ int main()
 	
 	for (int i = 0; i < n; ++i)
 	{
-		for(int j = 0; j < n; ++j)
+		for(int j = i+1; j < n; ++j)
 		{
 			if (arr[i] == arr[j])
 			{
+				del_ele(arr, n, j);
+				n--;
 				c++;
 			}
-
-			if (c > 1)
-			{
-				del_ele(arr, n, j);
-				j--;
-				n--;
-			}
+			else
+				j++;
 		}
 	}
 	printf("N= %d\n", n);
 	printf("AFter deletion elements are: ");
-	for(int i = 0; i < dup - copies; ++i)
+	for(int i = 0; i < n; ++i)
 		printf("%d ", arr[i]);
 	printf("\n");
 	return 0;
