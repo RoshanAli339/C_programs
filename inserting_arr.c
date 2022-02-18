@@ -22,22 +22,22 @@ int main()
 	scanf("%d", &pos);
 
 	insert(arr, n, x, pos);
-	
+	n++;
 	printf("After inserting: ");
 	for (int i = 0; i < n; ++i)
 	{
 		printf("%d ", arr[i]);
 	}
-        
+        printf("\n");
 	return 0;
 }
 
 void insert(int a[20], int n, int x, int pos)
 {
 	int i;
-	for (i = n ; i < pos - 1; ++i)
+	for (i = n ; i > pos - 1; --i)
 	{
-		a[i] = a[i  - 1];
+		printf("E= %d\n",a[i]);
 	}
 
 	a[pos - 1] = x;
