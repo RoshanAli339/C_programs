@@ -20,12 +20,11 @@ int main()
 		{
 			if (arr[i] == arr[j])
 			{
-				del_ele(arr, n, j);
+				for (int k = j; k < n; ++k)
+					arr[k] = arr[k+1];
+				j--;
 				n--;
-				c++;
 			}
-			else
-				j++;
 		}
 	}
 	printf("N= %d\n", n);
@@ -34,11 +33,4 @@ int main()
 		printf("%d ", arr[i]);
 	printf("\n");
 	return 0;
-}
-
-void del_ele(int arr[20], int n, int pos)
-{
-	int i;
-	for (i = pos; i < n - 1; ++i)
-		arr[i] = arr[i+1];
 }
