@@ -43,12 +43,10 @@ int main()
 			}
 		}
 
-		printf("I= %d\n", i);
 		if (i % 2 == 0)
 			mod += mat[0][i] * sub_matrix_mod(val);
 		else
 			mod -= mat[0][i] * sub_matrix_mod(val);
-		printf("Mod= %d\n", mod);
 	}
 
 	printf("The modulus of the given matrix is: %d\n", mod);
@@ -57,15 +55,6 @@ int main()
 
 int sub_matrix_mod(int a[2][2])
 {
-	printf("Sub matrix: \n");
-	for (int i = 0; i < 2; ++i)
-	{
-		for (int j = 0; j < 2; ++j)
-			printf("%d\t", a[i][j]);
-		printf("\n");
-	}
 	int mod = (a[0][0] * a[1][1]) - (a[0][1] * a[1][0]);
-
-	printf("Sub mod= %d\n", mod);
 	return mod;
 }
