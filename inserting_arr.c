@@ -8,7 +8,7 @@ int main()
 	printf("Enter the number of elements: ");
 	scanf("%d", &n);
 
-	printf("Enter the number of elements: ");
+	printf("Enter the elements: ");
 	for(int i = 0; i < n; ++i)
 	{
 		scanf("%d", &arr[i]);
@@ -37,7 +37,7 @@ void insert(int a[20], int n, int x, int pos)
 	int i;
 	for (i = n ; i > pos - 1; --i)
 	{
-		printf("E= %d\n",a[i]);
+		a[i] = a[i - 1];
 	}
 
 	a[pos - 1] = x;
