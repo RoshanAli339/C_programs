@@ -34,7 +34,6 @@ void del(int a[10], int n, int x)
 		{
 			for (int j = i; j < n; ++j)
 				a[j] = a[j+1];
-			n-=1;
 		}
 	}
 }
