@@ -15,7 +15,7 @@ int main()
 	printf("Enter the element you want to delete: ");
 	scanf("%d", &x);
 
-	del(a, n, r);
+	del(a, n, x);
 
 	n-=1;
 
