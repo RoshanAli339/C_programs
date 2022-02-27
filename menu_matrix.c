@@ -126,7 +126,7 @@ void multiply(int a[5][5], int b[5][5], int c[5][5], int r1, int c1, int r2, int
     for (int i = 0; i < r1; ++i)
         for (int j = 0; j < c2; ++j)
         {
-            c[i][j] == 0;
+            c[i][j] = 0;
             for (int k = 0; k < c1; ++k)
                 c[i][j] += a[i][k] * b[k][j];
         }
