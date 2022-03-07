@@ -1,11 +1,9 @@
 #include <stdio.h>
 
-void del(int[], int, int);
 
 int main()
 {
-    int arr[10], n;
-
+    int arr[10], b[10], n, j = 0;
     printf("Enter number of terms: ");
     scanf("%d", &n);
     
@@ -13,32 +11,26 @@ int main()
     for (int i = 0; i < n; ++i)
         scanf("%d", &arr[i]);
     
-    int x;
+    for (int i = 0; i < n; ++i)
+    {
+        if (arr[i] % 10 != 0) 
+        {
+            b[j] = arr[i];
+            j++;
+        }
+    }
     for (int i = 0; i < n; ++i)
     {
         if (arr[i] % 10 == 0)
         {
-            x = arr[i];
-            del(arr, n, arr[i]);
-            arr[n - 1] = x;
+            b[j] = arr[i];
+            j++;
         }
     }
 
     printf("After: ");
     for (int i = 0; i < n; ++i)
-        printf("%d  ", arr[i]);
+        printf("%d  ", b[i]);
     printf("\n");
     return 0;
-}
-
-void del(int arr[10], int n, int x)
-{
-    for (int i = 0; i < n; ++i)
-    {
-        if (arr[i] == x)
-        {
-            for (int j = i; j < n; ++j)
-                arr[j] = arr[j + 1];
-        }
-    }
 }
