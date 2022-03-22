@@ -8,7 +8,7 @@ int main()
     printf("Enter number of names: ");
     scanf("%d", &n);
 
-    names = (char**)malloc(n * sizeof(char));
+    names = (char**)malloc(n * sizeof(char*));
     printf("Enter the names: \n");
     for (int i = 0; i < n; ++i)
     {
