@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <string.h>
+#include <malloc.h>
+
 
 void sort(char*[10], int);
 
@@ -13,11 +15,12 @@ int main()
     printf("Enter the names: \n");
     for (int i = 0; i < n; ++i)
     {
+        names[i] = (char*)malloc(20 * sizeof(char));
         printf("Enter name %d: ", (i+1));
-        gets(names[i]);
-    }
+        scanf(" %[^\n]s", names[i]);
+    }    
 
-    //sort(names, n);
+    sort(names, n);
 
     printf("The names after sorting are: \n");
     for (int i = 0; i < n; ++i)
