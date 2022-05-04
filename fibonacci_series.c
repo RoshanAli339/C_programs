@@ -6,14 +6,26 @@ int main()
 	printf("Enter the number of terms: ");
 	scanf("%d",&n);
 	
-	printf("\fThe fibonacci numbers are: %d %d ", a, b); 
-	for (int i = 2; i < n; ++i) 
+	if (n == 1)
 	{
-		c = a + b;
-		printf("%d ",c);
-		a = b;
-		b = c;
+		printf("%d\n", a);
 	}
+	else if (n == 2)
+	{
+		printf("%d %d\n", a, b);
+	}
+	else if (n >= 3)
+	{
+		printf("\fThe fibonacci numbers are: %d %d ", a, b); 
+		for (int i = 2; i < n; ++i) 
+		{
+			c = a + b;
+			printf("%d ",c);
+			a = b;
+			b = c;
+		}
+	}
+	
 }
 
 
