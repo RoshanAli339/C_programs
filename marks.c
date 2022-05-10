@@ -19,16 +19,16 @@ int main()
     {
         if ( subs_mid1[i] > subs_mid2[i])
         {
-            avgs[i] = (subs_mid1[i] * (80.0/100)) + (subs_mid2[i] * (20.0/100));
+            avgs[i] = (subs_mid1[i] * (75.0/100)) + (subs_mid2[i] * (25.0/100));
         }
         else {
-            avgs[i] = (subs_mid2[i] * (80.0/100)) + (subs_mid1[i] * (20.0/100));
+            avgs[i] = (subs_mid2[i] * (75.0/100)) + (subs_mid1[i] * (25.0/100));
         }
     }
 
     printf("Average marks are: \n");
     for (int i = 0; i < 4; ++i)
     {
-        printf("sub%d: %.2f\n", i+1, avgs[i]);
+        printf("sub%d: %.2f\n", i+1, avgs[i]);  
     }
 }
