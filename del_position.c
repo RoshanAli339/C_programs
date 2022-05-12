@@ -23,7 +23,7 @@ int main()
 
 void del(int arr[10], int n, int pos)
 {
-    for (int i = pos - 1; i < n - 1; ++i)
+    for (int i = pos - 1; i < n ; ++i)
     {
         arr[i] = arr[i+1];
     }
