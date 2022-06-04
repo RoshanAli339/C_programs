@@ -40,7 +40,7 @@ int main()
         }
     }
 
-    printf("The most popular flower is: %s\n", f[index].name);
+    printf("The most popular flower is %s with maximum samples sold: %d\n", f[index].name, f[index].samples);
     char cat[6];
     printf("Enter the category to check the total income of; 1.Herb 2.Shrub 3.Tree: ");
     scanf(" %d", &ch);
