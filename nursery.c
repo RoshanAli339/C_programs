@@ -49,7 +49,7 @@ int main()
     for (int i = 0; i < 10; i++)
     {
         total += f[i].samples;
-        if (strcmp(f[i].category, category[ch-1]))
+        if (!strcmp(f[i].category, category[ch-1]))
         {
             income += f[i].price * f[i].samples;
         }
